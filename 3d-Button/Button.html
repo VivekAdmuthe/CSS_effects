@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>3-D CARDS</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='Button.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+
+
+<a class="btn1" href="#">BUTTON</a>
+<a class="btn2" href="#">BUTTON</a>
+
+<script type="text/javascript">
+
+const buttons = document.querySelectorAll('a');
+buttons.foreach(btn => {
+    btn.addeventListener('click',function(e) {
+
+Let; x = e.clientX - e.target.offsetLeft;
+Let; y = e.clientY - e.target.offsetTop;
+Let; ripples = document.createElement('span');
+ripples.style.left = x + 'px';
+ripples.style.top = y + 'px';
+this.appendChild(ripples);
+setTimeout(() =>{
+    ripples.remove()},1000);
+    })
+
+    })
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
